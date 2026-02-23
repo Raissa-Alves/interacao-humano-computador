@@ -1,0 +1,38 @@
+{% extends 'telas/base.html' %}
+
+{% block content %}
+<section style="padding: 100px 0; min-height: 80vh; display: flex; align-items: center;">
+    <div class="container"
+        style="max-width: 450px; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        <h2 class="text-center" style="margin-bottom: 30px;">Criar Conta</h2>
+        <form style="display: grid; gap: 15px;">
+            <div class="input-group">
+                <label>Nome Completo</label>
+                <input type="text" placeholder="Seu nome"
+                    style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px;">
+            </div>
+            <div class="input-group">
+                <label>E-mail</label>
+                <input type="email" placeholder="seu@email.com"
+                    style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px;">
+            </div>
+            <div class="input-group">
+                <label>Senha</label>
+                <input type="password" placeholder="********"
+                    style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px;">
+            </div>
+            <div class="input-group">
+                <label>Confirmar Senha</label>
+                <input type="password" placeholder="********"
+                    style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px;">
+            </div>
+            <button type="button" class="btn btn-primary"
+                style="padding: 12px; width: 100%; font-weight: 700; margin-top: 10px;">Criar Conta</button>
+        </form>
+        <p class="text-center" style="margin-top: 20px; color: var(--light-text); font-size: 0.9rem;">
+            Já tem uma conta? <a href="{% url 'login' %}" style="color: var(--secondary-color); font-weight: 600;">Faça
+                login</a>
+        </p>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'telas/base.html' %}
+
+{% block content %}
+<section style="padding: 100px 0; min-height: 80vh;">
+    <div class="container text-center">
+        <h2>Gerenciar Reserva</h2>
+        <div class="section-divider"></div>
+        <p>Visualize, modifique ou cancele suas passagens.</p>
+        <div
+            style="margin-top: 40px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 500px; margin-left: auto; margin-right: auto;">
+            <form style="display: grid; gap: 20px; text-align: left;">
+                <div class="input-group">
+                    <label>ID da Reserva</label>
+                    <input type="text" placeholder="ex: BG123456"
+                        style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px;">
+                </div>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="E-mail usado na reserva"
+                        style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px;">
+                </div>
+                <button type="button" class="btn btn-primary" style="padding: 12px;">Encontrar Reserva</button>
+            </form>
+        </div>
+        <a href="{% url 'index' %}" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Voltar
+            ao Início</a>
+    </div>
+</section>
+{% endblock %}

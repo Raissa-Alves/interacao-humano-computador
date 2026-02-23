@@ -1,0 +1,149 @@
+{% extends 'telas/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1>Sua Jornada Começa com uma <span class="text-highlight">Viagem Confortável</span></h1>
+        <p>Viaje por mais de 500 cidades com o serviço de ônibus mais confiável e acessível. Frotas modernas, Wi-Fi
+            gratuito e
+            conforto premium.</p>
+
+        <div class="search-box">
+            <form action="{% url 'search' %}" method="get" class="search-form">
+                <div class="input-group">
+                    <label><i class="fas fa-map-marker-alt"></i> DE</label>
+                    <input type="text" name="origin" placeholder="Cidade de Origem" required>
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-location-arrow"></i> PARA</label>
+                    <input type="text" name="destination" placeholder="Destino" required>
+                </div>
+                <div class="input-group">
+                    <label><i class="far fa-calendar-alt"></i> DATA DE PARTIDA</label>
+                    <input type="date" name="date">
+                </div>
+                <button type="submit" class="btn btn-large btn-search">Buscar Passagens</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container text-center">
+        <h2>Por que nos escolher?</h2>
+        <div class="section-divider"></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon icon-blue">
+                    <i class="fas fa-tag"></i>
+                </div>
+                <h3>Preços Baixos</h3>
+                <p>Viagens acessíveis para todos os orçamentos sem comprometer a qualidade do serviço.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon icon-cyan">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>Wi-Fi Grátis</h3>
+                <p>Fique conectado enquanto se desloca. Desfrute de internet de alta velocidade em todos os nossos
+                    ônibus premium.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon icon-indigo">
+                    <i class="fas fa-couch"></i>
+                </div>
+                <h3>Assentos Confortáveis</h3>
+                <p>Espaço extra para as pernas e assentos reclináveis ergonômicos para uma viagem relaxante.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="destinations">
+    <div class="container">
+        <div class="section-header">
+            <h2>Principais Destinos</h2>
+            <a href="{% url 'routes' %}" class="view-all">Ver todas as rotas</a>
+        </div>
+        <p class="section-subtitle">Descubra rotas populares e preços iniciais.</p>
+
+        <div class="destinations-grid">
+            <div class="destination-card"
+                style="background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=600&q=80');">
+                <div class="card-overlay"></div>
+                <div class="card-info">
+                    <h3>Nova York</h3>
+                    <div class="price-tag">
+                        <span>De Boston</span>
+                        <span class="price">$24.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card"
+                style="background-image: url('https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=600&q=80');">
+                <div class="card-overlay"></div>
+                <div class="card-info">
+                    <h3>Washington D.C.</h3>
+                    <div class="price-tag">
+                        <span>De Nova York</span>
+                        <span class="price">$19.50</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card"
+                style="background-image: url('https://images.unsplash.com/photo-1541464522988-31b420f688b9?auto=format&fit=crop&w=600&q=80');">
+                <div class="card-overlay"></div>
+                <div class="card-info">
+                    <h3>Boston</h3>
+                    <div class="price-tag">
+                        <span>De Filadélfia</span>
+                        <span class="price">$32.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card"
+                style="background-image: url('https://images.unsplash.com/photo-1542304291-724558e80738?auto=format&fit=crop&w=600&q=80');">
+                <div class="card-overlay"></div>
+                <div class="card-info">
+                    <h3>Filadélfia</h3>
+                    <div class="price-tag">
+                        <span>De DC</span>
+                        <span class="price">$18.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="trust-bar">
+    <div class="container flex-justify">
+        <div class="trust-item"><i class="fas fa-check-circle"></i> ViagemSegura</div>
+        <div class="trust-item"><i class="fas fa-leaf"></i> ÔnibusVerde</div>
+        <div class="trust-item"><i class="fas fa-lock"></i> PagamentoSeguro</div>
+        <div class="trust-item"><i class="fas fa-user-friends"></i> EscolhaDoViajante</div>
+    </div>
+    <div class="text-center trust-meta">
+        <p>Confiado por mais de 10.000 viajantes mensais em todo o país.</p>
+    </div>
+</div>
+
+<section class="newsletter">
+    <div class="container newsletter-content">
+        <div class="newsletter-text">
+            <h2>Receba Ofertas Especiais</h2>
+            <p>Assine nossa newsletter e receba descontos exclusivos e atualizações de viagem diretamente na sua caixa
+                de entrada.</p>
+            <form action="#" class="newsletter-form">
+                <input type="email" placeholder="Digite seu endereço de e-mail">
+                <button type="submit" class="btn btn-light">Assinar Agora</button>
+            </form>
+        </div>
+        <div class="newsletter-icon">
+            <i class="far fa-envelope"></i>
+        </div>
+    </div>
+</section>
+{% endblock %}

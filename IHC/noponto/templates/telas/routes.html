@@ -1,0 +1,17 @@
+{% extends 'telas/base.html' %}
+
+{% block content %}
+<section style="padding: 100px 0; min-height: 80vh;">
+    <div class="container text-center">
+        <h2>Rotas de Ônibus</h2>
+        <div class="section-divider"></div>
+        <p>Explore todas as nossas rotas de ônibus disponíveis em todo o país.</p>
+        <div
+            style="margin-top: 40px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <p style="color: var(--light-text);">Lista de rotas em breve...</p>
+        </div>
+        <a href="{% url 'index' %}" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Voltar
+            ao Início</a>
+    </div>
+</section>
+{% endblock %}
