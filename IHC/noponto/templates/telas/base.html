@@ -22,7 +22,15 @@
             No<span style="color: var(--primary-color);">Ponto</span>
                                     </a>
                                     </div>
-        
+        <nav class="nav-links">
+                <a href="{% url 'index' %}">Inicio</a>
+                <a href="{% url 'routes' %}">Rotas</a>
+                <a href="{% url 'offers' %}">Ofertas</a>
+            </nav>
+            <div class="auth-buttons">
+                <a href="{% url 'login' %}" class="btn btn-outline">Entrar</a>
+                <a href="{% url 'signup' %}" class="btn btn-primary">Cadastrar</a>
+            </div>
           
             
           
